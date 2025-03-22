@@ -74,14 +74,28 @@ This is a Django-based application that integrates with the M-Pesa Daraja API to
 ## Project Structure
 
 mpesa_daraja_app/
-├── mpesa_daraja_app/
-│   ├── settings.py       # Django settings
-│   ├── urls.py           # URL routing
-│   ├── wsgi.py           # WSGI configuration
-├── mpesa/
-│   ├── views.py          # Views for STK Push and callback handling
-│   ├── urls.py           # App-specific URL routing
-│   ├── templates/        # HTML templates for the UI
-├── manage.py             # Django management script
-├── .env                  # Environment variables
-├── requirements.txt      # Python dependencies
+├── mpesa_daraja_app/       # Main Django project folder
+│   ├── __init__.py         # Marks the directory as a Python package
+│   ├── asgi.py             # ASGI configuration
+│   ├── settings.py         # Django settings
+│   ├── urls.py             # URL routing
+│   ├── wsgi.py             # WSGI configuration
+├── mpesa/                  # App folder for M-Pesa integration
+│   ├── __init__.py         # Marks the directory as a Python package
+│   ├── admin.py            # Admin interface configuration
+│   ├── apps.py             # App configuration
+│   ├── models.py           # Database models
+│   ├── tests.py            # Unit tests for the app
+│   ├── views.py            # Views for STK Push and callback handling
+│   ├── urls.py             # App-specific URL routing
+│   ├── templates/          # HTML templates for the UI
+│       ├── base.html       # Base template
+│       ├── payment.html    # Payment page template
+├── manage.py               # Django management script
+├── .env                    # Environment variables
+├── requirements.txt        # Python dependencies
+├── db.sqlite3              # SQLite database (if used)
+├── static/                 # Static files (CSS, JS, images)
+│   ├── css/
+│   ├── js/
+│   ├── images/
